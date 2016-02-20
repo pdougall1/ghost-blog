@@ -12,7 +12,18 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'http://patrickdougall.com',
-        mail: {},
+        mail: {
+            transport: 'SMTP',
+            options: {
+                service: 'Mailgun',
+                auth: {
+                  // currently this is set to sandbox.
+                  // should be changed to real domain settings one verified
+                    user: 'postmaster@sandbox537387f4f1524c999d1c62a5a5953d19.mailgun.org',
+                    pass: 'c8ba8285395c92347209bcb165e6f6d2'
+                }
+            }
+        },
         database: {
             client: 'sqlite3',
             connection: {
@@ -32,21 +43,16 @@ config = {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blog's published URL.
         url: 'http://localhost:2368',
-
-        // Example mail config
-        // Visit http://support.ghost.org/mail for instructions
-        // ```
-        //  mail: {
-        //      transport: 'SMTP',
-        //      options: {
-        //          service: 'Mailgun',
-        //          auth: {
-        //              user: '', // mailgun username
-        //              pass: ''  // mailgun password
-        //          }
-        //      }
-        //  },
-        // ```
+        mail: {
+            transport: 'SMTP',
+            options: {
+                service: 'Mailgun',
+                auth: {
+                    user: 'postmaster@sandbox537387f4f1524c999d1c62a5a5953d19.mailgun.org',
+                    pass: 'c8ba8285395c92347209bcb165e6f6d2'
+                }
+            }
+        },
 
         // #### Database
         // Ghost supports sqlite3 (default), MySQL & PostgreSQL
