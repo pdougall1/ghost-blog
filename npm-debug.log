@@ -1,23 +1,36 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'stop', '--production' ]
-2 info using npm@2.14.12
-3 info using node@v4.3.1
-4 verbose stack Error: missing script: stop
-4 verbose stack     at run (/usr/lib/node_modules/npm/lib/run-script.js:142:19)
-4 verbose stack     at /usr/lib/node_modules/npm/lib/run-script.js:58:5
-4 verbose stack     at /usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:345:5
-4 verbose stack     at checkBinReferences_ (/usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:309:45)
-4 verbose stack     at final (/usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:343:3)
-4 verbose stack     at then (/usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:113:5)
-4 verbose stack     at /usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:232:12
-4 verbose stack     at /usr/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:76:16
-4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:380:3)
-5 verbose cwd /var/www/ghost
-6 error Linux 3.13.0-71-generic
-7 error argv "/usr/bin/nodejs" "/usr/bin/npm" "stop" "--production"
-8 error node v4.3.1
-9 error npm  v2.14.12
-10 error missing script: stop
-11 error If you need help, you may report this error at:
-11 error     <https://github.com/npm/npm/issues>
-12 verbose exit [ 1, true ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
+2 info using npm@2.5.1
+3 info using node@v0.12.0
+4 verbose node symlink /usr/local/bin/node
+5 verbose run-script [ 'prestart', 'start', 'poststart' ]
+6 info prestart ghost@0.7.8
+7 info start ghost@0.7.8
+8 verbose unsafe-perm in lifecycle true
+9 info ghost@0.7.8 Failed to exec start script
+10 verbose stack Error: ghost@0.7.8 start: `node index`
+10 verbose stack Exit status 255
+10 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:213:16)
+10 verbose stack     at EventEmitter.emit (events.js:110:17)
+10 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:14:12)
+10 verbose stack     at ChildProcess.emit (events.js:110:17)
+10 verbose stack     at maybeClose (child_process.js:1008:16)
+10 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1080:5)
+11 verbose pkgid ghost@0.7.8
+12 verbose cwd /Users/patrickdougall/Projects/ghost-blog
+13 error Darwin 14.5.0
+14 error argv "node" "/usr/local/bin/npm" "start"
+15 error node v0.12.0
+16 error npm  v2.5.1
+17 error code ELIFECYCLE
+18 error ghost@0.7.8 start: `node index`
+18 error Exit status 255
+19 error Failed at the ghost@0.7.8 start script 'node index'.
+19 error This is most likely a problem with the ghost package,
+19 error not with npm itself.
+19 error Tell the author that this fails on your system:
+19 error     node index
+19 error You can get their info via:
+19 error     npm owner ls ghost
+19 error There is likely additional logging output above.
+20 verbose exit [ 1, true ]
